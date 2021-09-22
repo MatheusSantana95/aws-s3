@@ -1,0 +1,17 @@
+
+pipeline{
+    agent any
+    stages{
+
+        stage ('Permission') {
+            steps{
+                sh 'chmod +x build-and-launch.sh'
+            }
+        }
+        stage('Build-and-Launch'){
+            steps{
+                sh 'sh build-and-launch.sh'
+            }
+        }
+    }     
+}
