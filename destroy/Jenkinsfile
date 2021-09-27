@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Destroy'){
             steps{
-                sh 'terraform destroy -auto-approve'
+                sh 'cd build-and-launch && terraform destroy -auto-approve'
             }
         }
     }     
