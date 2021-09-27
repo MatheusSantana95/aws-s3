@@ -5,12 +5,12 @@ pipeline{
 
         stage ('Permission') {
             steps{
-                sh 'chmod +x build-and-launch.sh'
+                sh 'cd build-and-launch && chmod +x build-and-launch.sh'
             }
         }
         stage('Build-and-Launch'){
             steps{
-                sh 'sh build-and-launch.sh'
+                sh 'cd build-and-launch && sh build-and-launch.sh'
             }
         }
     }     
