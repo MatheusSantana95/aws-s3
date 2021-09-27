@@ -2,6 +2,11 @@
 pipeline{
     agent any
     stages{
+        stage ('Initialization') {
+            steps{
+                sh 'cd build-and-launch && terraform init'
+            }
+
         stage('Destroy'){
             steps{
                 sh 'cd build-and-launch && terraform destroy -auto-approve'
