@@ -17,7 +17,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "first_s3" {
   bucket = "matheuss3"
-  ac1    = "private"
+  acl    = "private"
 
 
   tags = {
